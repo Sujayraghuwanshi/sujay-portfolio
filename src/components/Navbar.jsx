@@ -14,10 +14,10 @@ function Navbar() {
       </ul>
 
       <a href="/resume.pdf" download>
-        <button className="resume-btn">
-          Resume ⬇
-        </button>
-      </a>
+         <button className="resume-btn">
+           📄 Resume
+         </button>
+       </a>
     </nav>
   );
 }

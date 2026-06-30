@@ -17,15 +17,15 @@ function App() {
       {/* Hero Section */}
       <div className="hero-socials">
   <a
-    href="https://github.com/YOUR_GITHUB_USERNAME"
+    href="https://github.com/Sujayraghuwanshi"
     target="_blank"
     rel="noreferrer"
-  >
+>
     <FaGithub />
-  </a>
+</a>
 
   <a
-    href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+    href="https://www.linkedin.com/in/sujay-raghuwanshi-990a722b4/"
     target="_blank"
     rel="noreferrer"
   >
@@ -60,17 +60,17 @@ function App() {
 
           <div className="hero-buttons">
             <a href="/resume.pdf" download>
-              <button className="hire-btn">
-                Download Resume
-              </button>
-            </a>
+             <button className="hire-btn">
+              📄 Download Resume
+            </button>
+         </a>
 
-            <a href="#projects">
-              <button className="project-btn">
-                View Projects ↓
-              </button>
-            </a>
-          </div>
+         <a href="#projects">
+          <button className="project-btn">
+          🚀 View Projects
+          </button>
+        </a>
+       </div>
         </div>
 
         <div className="right">

@@ -8,30 +8,32 @@ function Contact() {
 
         <p>
           I'm currently looking for internship and software development
-          opportunities. Feel free to contact me.
+          opportunities. Feel free to connect with me.
         </p>
 
         <div className="contact-info">
-          <p>📧 Email : youremail@gmail.com</p>
-          <p>📱 Phone : +91 XXXXXXXXXX</p>
-          <p>📍 Bhopal, Madhya Pradesh</p>
+          <p>📧 Email : <a href="mailto:raghuwanshid589@gmail.com">raghuwanshid589@gmail.com</a></p>
+
+          <p>📱 Phone : <a href="tel:+917772042591">+91 7772042591</a></p>
+
+          <p>📍 Bhopal, Madhya Pradesh, India</p>
         </div>
 
         <div className="social-links">
           <a
-            href="https://github.com/"
+            href="https://github.com/Sujayraghuwanshi"
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            🐙 GitHub
           </a>
 
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/sujay-raghuwanshi-990a722b4/"
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn
+            💼 LinkedIn
           </a>
         </div>
       </div>

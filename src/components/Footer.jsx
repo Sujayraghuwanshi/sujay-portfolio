@@ -5,8 +5,10 @@ function Footer() {
 
       <p>Java Developer | AIML Student</p>
 
+      <p>Built with ❤️ using React & Vite</p>
+
       <p className="copyright">
-        © 2026 All Rights Reserved.
+        © 2026 Sujay Raghuwanshi. All Rights Reserved.
       </p>
     </footer>
   );
