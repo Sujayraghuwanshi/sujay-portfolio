@@ -816,3 +816,24 @@ button{
     padding: 10px 18px;
     font-size: 15px;
 }
+@media (max-width:768px){
+
+  .navbar{
+      display:flex;
+      flex-direction:row;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 20px;
+  }
+
+  .nav-links{
+      display:none;
+  }
+
+}
+.hire-btn{
+    width:100%;
+    max-width:280px;
+    font-size:18px;
+    padding:14px 20px;
+}
