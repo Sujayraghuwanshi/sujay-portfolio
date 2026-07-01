@@ -837,3 +837,11 @@ button{
     font-size:18px;
     padding:14px 20px;
 }
+.left p{
+    max-width: 320px;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+.hire-btn{
+    border-radius:16px;
+}
