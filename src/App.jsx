@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Loader from "./components/Loader";
+import GitHubStats from "./components/GitHubStats";
 
 import profile from "./assets/passport.png";
 
@@ -110,6 +111,7 @@ function App() {
       <Skills />
       <Education />
       <Projects />
+      <GitHubStats />
       <Contact />
 
       <ScrollToTop />

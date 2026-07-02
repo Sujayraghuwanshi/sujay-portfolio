@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 function Navbar() {
   const [active, setActive] = useState("home");
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -27,6 +29,11 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleTheme = () => {
+    document.body.classList.toggle("light-theme");
+    setDarkMode(!darkMode);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -34,55 +41,23 @@ function Navbar() {
       </div>
 
       <ul className="nav-links">
-        <li>
-          <a href="#home" className={active === "home" ? "active" : ""}>
-            Home
-          </a>
-        </li>
-
-        <li>
-          <a href="#about" className={active === "about" ? "active" : ""}>
-            About
-          </a>
-        </li>
-
-        <li>
-          <a href="#skills" className={active === "skills" ? "active" : ""}>
-            Skills
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="#education"
-            className={active === "education" ? "active" : ""}
-          >
-            Education
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="#projects"
-            className={active === "projects" ? "active" : ""}
-          >
-            Projects
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="#contact"
-            className={active === "contact" ? "active" : ""}
-          >
-            Contact
-          </a>
-        </li>
+        <li><a href="#home" className={active==="home"?"active":""}>Home</a></li>
+        <li><a href="#about" className={active==="about"?"active":""}>About</a></li>
+        <li><a href="#skills" className={active==="skills"?"active":""}>Skills</a></li>
+        <li><a href="#education" className={active==="education"?"active":""}>Education</a></li>
+        <li><a href="#projects" className={active==="projects"?"active":""}>Projects</a></li>
+        <li><a href="#contact" className={active==="contact"?"active":""}>Contact</a></li>
       </ul>
 
-      <a href="/resume.pdf" download>
-        <button className="resume-btn">📄 Resume</button>
-      </a>
+      <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+        <button className="theme-btn" onClick={toggleTheme}>
+          {darkMode ? <FaSun /> : <FaMoon />}
+        </button>
+
+        <a href="/resume.pdf" download>
+          <button className="resume-btn">📄 Resume</button>
+        </a>
+      </div>
     </nav>
   );
 }
