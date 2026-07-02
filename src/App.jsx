@@ -5,16 +5,21 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import Loader from "./components/Loader";
 
 import profile from "./assets/passport.png";
 
 import "./App.css";
 
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
 
 function App() {
   return (
     <>
+      <Loader />
+
       <Navbar />
 
       {/* Hero Section */}
@@ -27,7 +32,22 @@ function App() {
             RAGHUWANSHI
           </h1>
 
-          <h2>Java Developer | AIML Student</h2>
+          <h2 style={{ color: "#3b82f6" }}>
+            <Typewriter
+              words={[
+                "Software Developer",
+                "AI/ML Student",
+                "Problem Solver",
+                "React Learner",
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={40}
+              delaySpeed={1500}
+            />
+          </h2>
 
           <p className="tech-stack">
             Java • Python • SQL • DSA
@@ -54,7 +74,6 @@ function App() {
             </a>
           </div>
 
-          {/* Social Icons */}
           <div className="hero-socials">
             <a
               href="https://github.com/Sujayraghuwanshi"
@@ -88,14 +107,12 @@ function App() {
       </section>
 
       <About />
-
       <Skills />
-
       <Education />
-
       <Projects />
-
       <Contact />
+
+      <ScrollToTop />
 
       <Footer />
     </>

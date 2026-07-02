@@ -1,4 +1,41 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 function Contact() {
+  const form = useRef();
+
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_xop0acn",
+        "template_y4fa6kj",
+        form.current,
+        "oemSkRE5Hys0r3A4W"
+      )
+      .then(
+        () => {
+          setLoading(false);
+
+          alert("✅ Message Sent Successfully!");
+
+          form.current.reset();
+        },
+        (error) => {
+          setLoading(false);
+
+          console.log(error);
+
+          alert("❌ Failed to send message.");
+        }
+      );
+  };
+
   return (
     <section className="contact" id="contact">
       <h2>Contact Me</h2>
@@ -15,7 +52,37 @@ function Contact() {
           opportunities. Feel free to connect with me.
         </p>
 
-        <div className="contact-info">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="contact-form"
+        >
+          <input
+            type="text"
+            name="from_name"
+            placeholder="Your Name"
+            required
+          />
+
+          <input
+            type="email"
+            name="from_email"
+            placeholder="Your Email"
+            required
+          />
+
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Your Message"
+            required
+          ></textarea>
+
+          <button type="submit">
+            {loading ? "Sending..." : "Send Message 🚀"}
+          </button>
+        </form>
+                <div className="contact-info">
           <p>
             📧 Email :
             <a href="mailto:raghuwanshid589@gmail.com">

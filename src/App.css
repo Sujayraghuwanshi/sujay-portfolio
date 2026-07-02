@@ -690,3 +690,156 @@ button{
 }
 
 }
+/* ==============================
+   SCROLL TO TOP BUTTON
+============================== */
+
+.scroll-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 18px rgba(37,99,235,.45);
+
+    transition: .3s;
+
+    z-index: 9999;
+}
+
+.scroll-top:hover{
+    background:#3b82f6;
+    transform:translateY(-6px) scale(1.08);
+}
+
+@media(max-width:768px){
+
+.scroll-top{
+
+    width:48px;
+    height:48px;
+
+    font-size:20px;
+
+    right:20px;
+    bottom:20px;
+
+}
+
+}
+/* ==============================
+   ACTIVE NAVBAR
+============================== */
+
+.nav-links a.active {
+    color: #3b82f6;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+/* ==========================================
+   LOADER
+========================================== */
+
+.loader{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:#050816;
+
+    z-index:99999;
+}
+
+.loader h1{
+    font-size:70px;
+    color:#3b82f6;
+    margin-bottom:15px;
+    animation:pulse 1s infinite;
+}
+
+.loader span{
+    color:#cbd5e1;
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.15);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 30px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  background: #1f2937;
+  color: #fff;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #3b82f6;
+}
