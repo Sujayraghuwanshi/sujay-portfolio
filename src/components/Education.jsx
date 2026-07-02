@@ -3,7 +3,11 @@ function Education() {
     <section className="education" id="education">
       <h2>Education</h2>
 
-      <div className="education-card">
+      <div
+        className="education-card"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <h3>B.Tech - Artificial Intelligence & Machine Learning</h3>
 
         <p>

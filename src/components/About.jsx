@@ -3,7 +3,11 @@ function About() {
     <section className="about" id="about">
       <h2>About Me</h2>
 
-      <div className="about-card">
+      <div
+        className="about-card"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      > 
         <p>
           Hi, I'm <strong>Sujay Raghuwanshi</strong>, a B.Tech student in
           Artificial Intelligence & Machine Learning at Technocrats Institute

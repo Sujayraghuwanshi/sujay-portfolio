@@ -16,7 +16,12 @@ function Skills() {
 
       <div className="skills-grid">
         {skills.map((skill) => (
-          <div className="skill-card" key={skill.name}>
+          <div
+           className="skill-card"
+           key={skill.name}
+           data-aos="zoom-in"
+          data-aos-duration="800"
+          >
             <h1>{skill.icon}</h1>
             <h3>{skill.name}</h3>
           </div>
