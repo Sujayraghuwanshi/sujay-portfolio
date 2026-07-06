@@ -10,14 +10,34 @@ import ScrollToTop from "./components/ScrollToTop";
 import Loader from "./components/Loader";
 import GitHubStats from "./components/GitHubStats";
 import ScrollProgress from "./components/ScrollProgress";
-
 import profile from "./assets/profile.png";
-
 import "./App.css";
-
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import Typed from "typed.js";
+import { useEffect, useRef } from "react";
 
 function App() {
+  const typedRef = useRef(null);
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+    strings: [
+      "Java Developer",
+      "Software Developer",
+      "Problem Solver",
+      "AIML Student"
+    ],
+    typeSpeed: 70,
+    backSpeed: 45,
+    backDelay: 1800,
+    loop: true,
+    showCursor: true,
+    cursorChar: "|",
+  });
+
+  return () => {
+    typed.destroy();
+  };
+}, []);
   return (
     <>
       <Loader />
@@ -40,8 +60,8 @@ function App() {
     </h1>
 
     <h2 className="hero-title">
-      Java Developer <span>|</span> AIML Student
-    </h2>
+  <span ref={typedRef}></span>
+</h2>
 
     <div className="hero-tech">
       <span>☕ Java</span>
